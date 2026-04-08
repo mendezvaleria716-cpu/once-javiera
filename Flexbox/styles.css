@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, serif;
+  background-color: #f5f0f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  background-color: rgb(238, 233, 233);
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 28px;
+  width: 100%;
+  max-width: 370px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-shadow: 0px 10px 10px #666;
+  
+}
+
+.top-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+}
+
+.foto {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #c084fc;
+  flex-shrink: 0;
+}
+
+.datos {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.datos h2 {
+  font-size: 17px;
+  font-weight: bold;
+  color: #2d2d2d;
+}
+
+.datos span {
+  font-size: 13px;
+  color: #da75c9;
+}
+
+.descripcion {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.linea {
+  border: none;
+  border-top: 1px solid #ece6f0;
+}
+
+.nums {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 8px;
+}
+
+.numero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+}
+
+.cifra {
+  font-size: 19px;
+  font-weight: bold;
+  color: #2d2d2d;
+}
+
+.etiqueta {
+  font-size: 11px;
+  color: #999;
+}
+
+.acciones {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.seguir {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #59b3b6;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.seguir:hover {
+  background-color: #5ab5d1;
+}
+
+.mensaje {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: white;
+  color: #2d2d2d;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.mensaje:hover {
+  background-color: #f9f4fc;
+}
+
+.titulo-galeria {
+  font-size: 11px;
+  font-weight: bold;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.fotos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.fotos img {
+  width: calc(33.333% - 4px);
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid #ece6f0;
+}
