@@ -1,0 +1,130 @@
+# 📊 Compendio de Ingeniería de Requisitos: Documentación Eficaz, Norma IEEE 830 y Modelado de Escenarios
+
+---
+
+## 1. El Imperativo de Documentar: Blindaje y Gobernanza del Conocimiento
+
+### 🧠 El Factor Humano frente al Registro Formal
+* **La falacia del conocimiento volátil:** Es común que perfiles técnicos emergentes asuman que la retención mental de las reglas de negocio es suficiente. 
+* **La realidad operativa:** La memoria humana degrada los detalles técnicos de forma acelerada. Un sistema sin soporte documental carece de auditabilidad, queda sujeto a la interpretación emocional del momento y expone al proyecto a una vulnerabilidad crítica ante la desvinculación, incapacidad o rotación del personal.
+* **El valor del activo escrito:** La documentación formal actúa como una fuente única de verdad inmutable. Garantiza la democratización del conocimiento en el equipo, sobrevive a los cambios de personal y constituye un instrumento con plena validez legal y contractual.
+
+### 📉 Impacto Financiero y Operativo de la Ausencia de Registro
+1.  **Erosión del Capital Intelectual:** La salida del único desarrollador que custodiaba las reglas lógicas del sistema obliga a las organizaciones a realizar inversiones masivas en consultorías externas para realizar ingeniería inversa sobre código heredado.
+2.  **Desalineación de Expectativas Contractuales:** La carencia de un pliego de condiciones formalizado y firmado por las partes desarma al equipo técnico ante demandas de cambios imprevistos por parte del cliente. Esto se traduce en ciclos indeterminados de retrabajo no remunerado.
+3.  **Vulnerabilidad Regulatoria:** Ante auditorías de entes de control, la incapacidad de demostrar el cumplimiento de normativas vigentes a través de registros técnicos deriva en sanciones económicas severas e incluso en la suspensión de operaciones.
+
+### 🎯 Los 5 Pilares Funcionales del Registro Técnico
+
+```
+ ┌────────────────────────────────────────────────────────┐
+ │            FUNCIONES DE LA DOCUMENTACIÓN               │
+ └──────────────────────────┬─────────────────────────────┘
+                            │
+       ┌────────────────────┼────────────────────┐
+       ▼                    ▼                    ▼
+┌──────────────┐     ┌──────────────┐     ┌──────────────┐
+│   ACUERDO    │     │    GUÍA      │     │ VERIFICACIÓN │
+│ Consenso     │     │ Hoja de ruta │     │ Criterios de │
+│ contractual  │     │ para el      │     │ aceptación   │
+│ con cliente  │     │ desarrollo   │     │ para QA      │
+└──────────────┘     └──────────────┘     └──────────────┘
+       ▲                                         ▲
+       └────────────────────┬────────────────────┘
+                            │
+       ┌────────────────────┴────────────────────┐
+       ▼                                         ▼
+┌──────────────┐                          ┌──────────────┐
+│ CONOCIMIENTO │                          │    LEGAL     │
+│ Memoria      │                          │ Evidencia    │
+│ histórica    │                          │ ante litigios│
+│ corporativa  │                          │ y auditorías │
+└──────────────┘                          └──────────────┘
+```
+
+> 💡 **Principio de Proporcionalidad:** El volumen y rigurosidad del artefacto documental deben ser directamente proporcionales al nivel de riesgo y criticidad del negocio. Una solución financiera o de soporte biomédico exige una especificación formal bajo normas estrictas (como IEEE 830), mientras que un producto mínimo viable (MVP) puede gestionarse mediante artefactos ágiles y ágiles historias de usuario.
+
+---
+
+## 2. 📘 Estructura y Atributos de Calidad bajo el Estándar IEEE 830
+
+La norma **IEEE 830** establece un marco de buenas prácticas internacionales para la confección de la **Especificación de Requisitos de Software (SRS)**, actuando como el estándar de comunicación técnica entre los interesados y el equipo de ingeniería.
+
+### 🏗️ Arquitectura de la Especificación de Requisitos (SRS)
+
+1.  **Sección Introductoria:** Define el objetivo primordial del documento, los límites del sistema (alcance), el glosario de términos técnicos, acrónimos y el marco de referencias normativas o legales.
+2.  **Perspectiva General del Sistema:** Describe el contexto del producto, las capacidades principales, el perfil sociotécnico de los usuarios finales, las restricciones operativas (plazos, presupuestos, tecnologías obligatorias) y los supuestos de partida.
+3.  **Requerimientos Específicos:** El núcleo del artefacto. Contiene el desglose minucioso de los Requisitos Funcionales (comportamiento del sistema), Requisitos No Funcionales (rendimiento, seguridad, disponibilidad), interfaces externas de usuario, hardware y software, así como los modelos conceptuales.
+4.  **Secciones Complementarias:** Anexos, esquemas de navegación, diagramas de baja fidelidad (*mockups*) y las matrices de trazabilidad de requisitos.
+
+### ✨ Las 8 Dimensiones de Calidad de un Requisito Profesional
+
+* **Idoneidad (Correcto):** Cada declaración debe alinearse estrictamente con una necesidad real y validada del negocio.
+* **Unicidad de Interpretación (No ambiguo):** La redacción debe admitir un único vector de análisis, eliminando adjetivos subjetivos.
+* **Integridad (Completo):** No debe presentar lagunas de información, secciones pendientes de definición ni marcadores de omisión (`TODO`).
+* **Coherencia (Consistente):** Los requisitos no deben entrar en conflicto ni contradecirse con otras especificaciones del sistema.
+* **Estratificación (Clasificado):** Cada elemento debe contar con una asignación de prioridad explícita (Crítico, Esencial, Deseable).
+* **Demostrabilidad (Verificable):** Debe existir un método objetivo (métrica, prueba o inspección) para constatar su cumplimiento.
+* **Maleabilidad (Modificable):** La estructura del documento debe permitir alteraciones granulares sin comprometer la integridad del conjunto.
+* **Rastreabilidad (Trazable):** Cada ítem requiere un identificador alfanumérico único que permita seguir su ciclo de vida desde el origen hasta el código y los casos de prueba.
+
+---
+
+## 3. 🎭 Modelado de Casos de Uso: Narrativa de la Interacción Técnica
+
+El **Caso de Uso (CU)** es un artefacto metodológico que describe de manera secuencial y estructurada las interacciones entre un actor externo y el sistema para alcanzar un resultado de valor cuantificable.
+
+### ⚖️ Distinción Arquitectónica Fundamental
+
+* **Requisito Funcional (El Qué):** Define la capacidad requerida de forma declarativa. 
+    * *Ejemplo:* "El sistema proporcionará el mecanismo para autenticar la identidad de los operarios."
+* **Caso de Uso (El Cómo):** Describe el diálogo dinámico y los flujos alternativos requeridos para materializar dicha capacidad.
+    * *Ejemplo:* "1. El operario ingresa sus credenciales; 2. El sistema cifra y contrasta la información; 3. El sistema autoriza el acceso a la consola de control."
+
+### 🧩 Elementos Constitutivos del Modelo
+
+* **Actor:** Rol ejecutor externo (humano, dispositivo de hardware u otro sistema de software) que interactúa con las fronteras del sistema.
+* **Frontera del Sistema:** Límite que define el alcance del software bajo análisis frente al entorno externo.
+* **Meta (Objetivo):** El resultado de valor concreto que el actor busca obtener del sistema.
+* **Escenario:** Sucesión cronológica de eventos y pasos lógicos orientados al cumplimiento de la meta.
+
+### 🔗 Mecanismos de Relación en Diagramas UML
+
+* **`«include»` (Inclusión):** Representa una dependencia obligatoria. El caso de uso origen **requiere necesariamente** invocar el comportamiento del caso de uso incluido para completar su lógica fundamental.
+    * *Ejemplo:* El escenario "Emitir Factura Electrónica" incluye obligatoriamente la ejecución de "Validar Firma Digital".
+* **`«extend»` (Extensión):** Representa una bifurcación condicional. El caso de uso base **puede** incorporar el flujo del caso de uso extendido solo si se satisface una condición específica previamente declarada.
+    * *Ejemplo:* El escenario "Procesar Pago" se extiende a "Aplicar Descuento Corporativo" únicamente si el perfil del cliente cumple con los criterios de fidelidad.
+
+---
+
+## 4. 📋 Matriz Estructurada de Casos de Uso (Estándar Corporativo)
+
+A continuación, se define la estructura formal de especificación para el despliegue analítico de los escenarios de uso:
+
+| Componente Técnico | Definición Operacional | Ejemplificación Aplicada |
+| :--- | :--- | :--- |
+| **Identificador** | Código alfanumérico único para control y trazabilidad. | `CU-AUT-002` |
+| **Denominación** | Acción expresada bajo la estructura: *Verbo en infinitivo + Objeto*. | `Solicitar Préstamo de Activo` |
+| **Iniciador (Actor)** | Rol principal que desencadena el flujo del sistema. | `Gestor de Inventario` |
+| **Sntesis Funcional** | Breve descripción del propósito y valor del escenario. | Permite al gestor reservar un activo técnico para asignación temporal. |
+| **Precondiciones** | Estado mandatorio del entorno antes de iniciar la ejecución. | El gestor posee permisos de escritura; El activo está catalogado como "Disponible". |
+| **Postcondiciones** | Estado final irreversible del sistema tras el éxito del flujo. | El activo cambia a estado "Reservado"; Se genera un token de retiro con vigencia de 48 horas. |
+| **Secuencia Principal** | El camino óptimo (*Happy Path*) numerado secuencialmente. | 1. El actor ingresa el ID del activo.<br>2. El sistema valida el estado y la política de asignación.<br>3. El sistema confirma la reserva y emite el comprobante. |
+| **Caminos Alternativos**| Desvíos lógicos válidos que conducen al éxito de la meta. | 1.a. El actor realiza la búsqueda del activo mediante escaneo de código QR en lugar del ID manual. |
+| **Flujos de Excepción** | Respuestas controladas ante fallos lógicos o de infraestructura. | 2.a. El sistema detecta que el activo está asignado a mantenimiento: notifica la restricción y cancela la operación. |
+| **Políticas de Negocio**| Reglas e invariantes institucionales que norman el proceso. | Un gestor no puede poseer más de cinco (5) reservas activas simultáneamente en el mismo período. |
+| **Métricas Operativas** | Estimación de la carga transaccional y relevancia en desarrollo. | **Frecuencia:** ~120 eventos diarios.<br>**Prioridad:** Alta (Bloque de entrega 1). |
+
+---
+
+## 5. 🔎 Inspección Cruzada: Garantía de Calidad en la Fase de Análisis
+
+La **inspección cruzada** es un proceso de revisión por pares técnicos (*Peer Review*) donde analistas independientes evalúan la SRS con el objetivo de mitigar defectos latentes antes de su codificación.
+
+### 🚫 Patrones de Falla Críticos a Detectar
+
+* **Ausencia de Métricas Objetivas (Subjetividad):** Uso de calificativos ambiguos como *"rápido"*, *"robusto"*, *"intuitivo"* o *"eficiente"*. Toda restricción debe ser expresada cuantitativamente (ej. *"Tiempo de respuesta en el percentil 95 inferior a 200 ms"*).
+* **Deficiencia en Atomicidad:** Agrupación de múltiples funcionalidades disímiles bajo un mismo identificador. 
+    * *Antipatrón:* "El módulo permitirá la gestión de reportes, el envío de alertas push y la depuración de logs." (Debe segmentarse en tres especificaciones atómicas independientes).
+* **Incoherencia Lógica Cruzada:** Presencia de directrices que se contradicen en diferentes secciones del artefacto, como exigir la anonimización absoluta de datos de usuario en la sección de seguridad, mientras que en los requisitos de reportería se solicita visualización de datos personales sin restricciones.
+* **Polución Técnica en Requisitos Funcionales:** Inserción prematura de detalles de diseño o arquitectura (referencias explícitas a verbos HTTP como `POST`/`PUT`, estructuras de *payloads* `JSON` o tokens `JWT`) en capas documentales destinadas a la firma de conformidad del cliente. Estas especificaciones pertenecen estrictamente a los artefactos de Arquitectura de Software y Diseño de APIs, no al requerimiento funcional de negocio.
